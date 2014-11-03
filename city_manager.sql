@@ -32,14 +32,12 @@ CREATE TABLE IF NOT EXISTS `City` (
   `City_id` int(11) NOT NULL,
   `Gold` int(11) DEFAULT NULL,
   `Soldier` int(11) DEFAULT NULL,
-  `Factory` int(11) DEFAULT NULL,
-  `Barracks` int(11) DEFAULT NULL,
-  `Spy_Barracks` int(11) DEFAULT NULL,
+  `Factory` int(5) DEFAULT NULL,
+  `Barracks` int(5) DEFAULT NULL,
+  `Spy_Barracks` int(5) DEFAULT NULL,
   `Wall` int(11) DEFAULT NULL,
-  `Life` int(11) DEFAULT NULL,
-  `Gold_s` int(11) DEFAULT NULL,
-  `Soldier_s` int(11) DEFAULT NULL,
-  `Life_s` int(11) DEFAULT NULL,
+  `Gold_s` int(5) DEFAULT NULL,
+  `Soldier_s` int(5) DEFAULT NULL,
   `User_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
