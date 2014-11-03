@@ -30,6 +30,7 @@ USE `city_manager`;
 
 CREATE TABLE IF NOT EXISTS `City` (
   `City_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `Name` varchar(20) DEFAULT NULL,
   `Gold` int(11) DEFAULT NULL,
   `Soldier` int(11) DEFAULT NULL,
   `Factory` int(5) DEFAULT NULL,
