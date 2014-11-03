@@ -29,7 +29,7 @@ USE `city_manager`;
 --
 
 CREATE TABLE IF NOT EXISTS `City` (
-  `City_id` int(11) NOT NULL,
+  `City_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `Gold` int(11) DEFAULT NULL,
   `Soldier` int(11) DEFAULT NULL,
   `Factory` int(5) DEFAULT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `City` (
 --
 
 CREATE TABLE IF NOT EXISTS `User` (
-  `User_id` int(11) NOT NULL,
+  `User_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `Pseudo` varchar(20) DEFAULT NULL,
   `Password` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -61,13 +61,11 @@ CREATE TABLE IF NOT EXISTS `User` (
 -- Index pour la table `city`
 --
 ALTER TABLE `City`
- ADD PRIMARY KEY (`City_id`), ADD KEY `User_id` (`User_id`);
+ ADD KEY `User_id` (`User_id`);
 
 --
 -- Index pour la table `user`
 --
-ALTER TABLE `User`
- ADD PRIMARY KEY (`User_id`);
 
 --
 -- Contraintes pour les tables exportées
