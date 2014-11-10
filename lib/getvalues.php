@@ -37,7 +37,7 @@ function getgold_s ($cityid)
 	private $requete;
 	private $result;
 	$requete = $connexion->prepare("SELECT Gold_s FROM city WHERE City_id = '%$cityid%' ");
-	$result -> $requete->execute();
+	$result = $requete->execute();
 	return $result;
 	
 }
