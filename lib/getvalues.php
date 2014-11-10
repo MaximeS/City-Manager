@@ -1,64 +1,71 @@
 <?php
 
-include '../include/connexion_PDO'
+include '../include/connexion_PDO.php';
 
-function getgold ($cityid)
+
+
+function getgold ($cityid, $connexion)
 {
-	private $requete;
-	private $result;
-	$requete = $connexion->prepare("SELECT Gold FROM city WHERE City_id = '%$cityid%' ");
-	$result -> $requete->execute();
-	return $result;
+	$requete = $connexion->prepare("SELECT Gold FROM city WHERE City_id = '%$cityid%' LIMIT 1");
+	$requete->execute();
+	$result = $requete->fetch();
+	return $result['Gold'];
 	
 }
 
-function getsoldier ($cityid)
+function getsoldier ($cityid, $connexion)
 {
-	private $requete;
-	private $result;
-	$requete = $connexion->prepare("SELECT Soldier FROM city WHERE City_id = '%$cityid%' ");
-	$result -> $requete->execute();
-	return $result;
+	$requete = $connexion->prepare("SELECT Soldier FROM city WHERE City_id = '%$cityid%' LIMIT 1");
+	$requete->execute();
+	$result = $requete->fetch();
+	return $result[0];
 	
 }
 
-function getsoldier_s ($cityid)
+function getsoldier_s ($cityid, $connexion)
 {
-	private $requete;
-	private $result;
-	$requete = $connexion->prepare("SELECT Soldier_s FROM city WHERE City_id = '%$cityid%' ");
-	$result -> $requete->execute();
-	return $result;
+	$requete = $connexion->prepare("SELECT Soldier_s FROM city WHERE City_id = '%$cityid%' LIMIT 1");
+	$requete->execute();
+	$result = $requete->fetch();
+	return $result[0];
 	
 }
 
-function getgold_s ($cityid)
+function getgold_s ($cityid, $connexion)
 {
-	private $requete;
-	private $result;
-	$requete = $connexion->prepare("SELECT Gold_s FROM city WHERE City_id = '%$cityid%' ");
-	$result = $requete->execute();
-	return $result;
+	$requete = $connexion->prepare("SELECT Gold_s FROM city WHERE City_id = '%$cityid%' LIMIT 1");
+	$requete->execute();
+	$result = $requete->fetch();
+	return $result[0];
 	
 }
 
-$cityid = //variable session
+$cityid =1;
 
 echo 
 "
-	<div id=gold>
-		getgold($cityid);
-	</div>
-	<div id=gold_s>
-		getgold_s($cityid);
-	</div>
-	<div id=soldier>
-		getsoldier($cityid);
-	</div>
-	<div id=soldier_s>
-		getsoldier_s($cityid);
-	</div>
-	
+<div id='infoscity'>
+	<div id='gold'>";
+		echo getgold($cityid, $connexion);
+echo
 "
+	</div>
+	<div id='gold_s'>";
+		echo getgold_s($cityid, $connexion);
+echo
+"
+	</div>
+	<div id='soldier'>";
+		echo getsoldier($cityid, $connexion);
+echo
+"
+	</div>
+	<div id='soldier_s'>";
+		echo getsoldier_s($cityid, $connexion);
+echo
+"
+	</div>
+</div>
+";
 
 ?>
