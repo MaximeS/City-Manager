@@ -1,9 +1,13 @@
 <?php
 
-	$sqlfactory = "SELECT Factory FROM city WHERE City_id = '%city_id%' ";
-	$sqlbarracks = "SELECT Barracks FROM city WHERE City_id = '%city_id%' ";
-	$sqlwall = "SELECT Wall FROM city WHERE City_id = '%city_id%' ";
-	$sqlspybarracks = "SELECT Spy_Barracks FROM city WHERE City_id = '%city_id%' ";
+	$stockfactory = $connexion ->prepare("SELECT Factory FROM city WHERE City_id = '%city_id%' ");
+	$sqlfactory = $stockfactory -> execute ();
+	$stockbarracks  = $connexion ->prepare("SELECT Barracks FROM city WHERE City_id = '%city_id%' ");
+	$sqlbarracks = $stockbarracks -> execute ();
+	$stockwall = $connexion ->prepare("SELECT Wall FROM city WHERE City_id = '%city_id%' ");
+	$sqlwall = $stockwall -> execute ();
+	$stockspybarracks = $connexion ->prepare("SELECT Spy_Barracks FROM city WHERE City_id = '%city_id%' ");
+	$sqlspybarracks = $stockspybarracks -> execute ();
 	
 	if ($sqlfactory > 0)
 	{
