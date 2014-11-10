@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 require 'vendor/autoload.php';
 ?>
@@ -15,4 +14,3 @@ require 'vendor/autoload.php';
 
 
 <?php include 'lib/footer.php';?>
->>>>>>> 47eef2d3fc1f09bfec1385d8a45a7eb0ca626152
