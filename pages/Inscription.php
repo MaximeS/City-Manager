@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 
-<form method="post" action="index.php">
+<form method="post" >
 	<fieldset>
 	<legend><h2>Inscription</h2></legend>
 	<p>
@@ -18,3 +18,35 @@
 	<a href="Connexion.php"> déja membre ? </a>
 	
 	</fieldset>
+	
+	
+<?php
+
+if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])) AND (!empty($_POST['passcheck'])) AND(!empty($_POST['mail_adress'])))
+{
+	if (($_POST['password']) == ($_POST['passcheck']))
+	{
+	
+		$pseudo = ($_POST['pseudo']);
+		$pass = ($_POST['password']);
+		
+		include '../include/connexion_PDO.php';
+	
+		$connexion->exec("INSERT INTO user VALUES ('', '$pseudo', md5('$pass'));");
+		
+		echo "<font color='green'> votre compte a bien été ajouté ! </font>";
+
+
+
+	
+
+	}else
+	
+	echo "les mots de passe no correspondent pas";
+
+
+}else
+	
+	echo "veuillez remplir tous les champs";
+?>
+	
