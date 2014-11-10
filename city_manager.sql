@@ -32,13 +32,13 @@ CREATE TABLE IF NOT EXISTS `City` (
   `City_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `Name` varchar(20) DEFAULT NULL,
   `Gold` int(11) DEFAULT NULL,
-  `Soldier` int(11) DEFAULT NULL,
+  `Soldiers` int(11) DEFAULT NULL,
   `Factory` int(5) DEFAULT NULL,
   `Barracks` int(5) DEFAULT NULL,
   `Spy_Barracks` int(5) DEFAULT NULL,
   `Wall` int(11) DEFAULT NULL,
   `Gold_s` int(5) DEFAULT NULL,
-  `Soldier_s` int(5) DEFAULT NULL,
+  `Soldiers_s` int(5) DEFAULT NULL,
   `User_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -55,6 +55,31 @@ CREATE TABLE IF NOT EXISTS `User` (
   `Message` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `Messages`
+--
+
+CREATE TABLE IF NOT EXISTS `Messages` (
+  `Message_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `Object` varchar(20) DEFAULT NULL,
+  `Content` varchar(500) DEFAULT NULL,
+  `User_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `News`
+--
+
+CREATE TABLE IF NOT EXISTS `News` (
+  `News_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `Title` varchar(20) DEFAULT NULL,
+  `Content` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Index pour les tables exportées
 --
@@ -62,8 +87,7 @@ CREATE TABLE IF NOT EXISTS `User` (
 --
 -- Index pour la table `city`
 --
-ALTER TABLE `City`
- ADD KEY `User_id` (`User_id`);
+
 
 --
 -- Index pour la table `user`
@@ -77,7 +101,9 @@ ALTER TABLE `City`
 -- Contraintes pour la table `city`
 --
 ALTER TABLE `City`
-ADD CONSTRAINT `city_ibfk_1` FOREIGN KEY (`User_id`) REFERENCES `user` (`User_id`);
+ADD CONSTRAINT `city_ibfk_1` FOREIGN KEY (`User_id`) REFERENCES `User`(`User_id`);
+ALTER TABLE `Messages`
+ADD CONSTRAINT `message_user` FOREIGN KEY (`User_id`) REFERENCES `User`(`User_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
