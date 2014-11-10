@@ -7,21 +7,21 @@
 	
 	if ($sqlfactory > 0)
 	{
-		echo "<img src="image/Factory.jpg"/>"
+		echo "<img src="../image/Factory.jpg"/>"
 	}
 	
 	if ($sqlbarracks > 0)
 	{
-		echo "<img src="image/Barracks.jpg"/>"
+		echo "<img src="../image/Barracks.jpg"/>"
 	}
 	
 	if ($sqlwall > 0)
 	{
-		echo "<img src="image/Wall.jpg"/>"
+		echo "<img src="../image/Wall.jpg"/>"
 	}
 	
 	if ($sqlspybarracks > 0)
 	{
-		echo "<img src="image/Spy_Barracks.jpg"/>"
+		echo "<img src="../image/Spy_Barracks.jpg"/>"
 	}
 ?>
