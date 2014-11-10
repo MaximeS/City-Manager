@@ -51,7 +51,8 @@ CREATE TABLE IF NOT EXISTS `City` (
 CREATE TABLE IF NOT EXISTS `User` (
   `User_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `Pseudo` varchar(20) DEFAULT NULL,
-  `Password` varchar(50) DEFAULT NULL
+  `Password` varchar(50) DEFAULT NULL,
+  `Message` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
