@@ -1,29 +1,64 @@
 <?php
 
+include '../include/connexion_PDO'
+
 function getgold ($cityid)
 {
-	$sql = "SELECT Gold FROM city WHERE City_id = '%$cityid%' ";
-	return  $sql;
+	private $requete;
+	private $result;
+	$requete = $connexion->prepare("SELECT Gold FROM city WHERE City_id = '%$cityid%' ");
+	$result -> $requete->execute();
+	return $result;
+	
 }
 
 function getsoldier ($cityid)
 {
-	$sql = "SELECT Soldier FROM city WHERE City_id = '%$cityid%' ";
-	return $sql;
+	private $requete;
+	private $result;
+	$requete = $connexion->prepare("SELECT Soldier FROM city WHERE City_id = '%$cityid%' ");
+	$result -> $requete->execute();
+	return $result;
+	
 }
 
 function getsoldier_s ($cityid)
 {
-	$sql = "SELECT Soldier_s FROM city WHERE City_id = '%$cityid%' ";
-	return $sql;
+	private $requete;
+	private $result;
+	$requete = $connexion->prepare("SELECT Soldier_s FROM city WHERE City_id = '%$cityid%' ");
+	$result -> $requete->execute();
+	return $result;
+	
 }
 
 function getgold_s ($cityid)
 {
-	$sql = "SELECT Gold_s FROM city WHERE City_id = '%$cityid%' ";
-	return $sql;
+	private $requete;
+	private $result;
+	$requete = $connexion->prepare("SELECT Gold_s FROM city WHERE City_id = '%$cityid%' ");
+	$result -> $requete->execute();
+	return $result;
+	
 }
 
+$cityid = //variable session
 
+echo 
+"
+	<div id=gold>
+		getgold($cityid);
+	</div>
+	<div id=gold_s>
+		getgold_s($cityid);
+	</div>
+	<div id=soldier>
+		getsoldier($cityid);
+	</div>
+	<div id=soldier_s>
+		getsoldier_s($cityid);
+	</div>
+	
+"
 
 ?>
