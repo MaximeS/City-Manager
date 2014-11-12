@@ -47,7 +47,6 @@ echo "<script> document.location.href = 'pages/connexion.php'; </script> ";
 	}	
 ?>
 
-=======
 <?php include 'lib/header.php';?>
 
 <div id="news_mail"></div>
