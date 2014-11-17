@@ -53,3 +53,4 @@ if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])))
 	
 	
 }
+/*Penser à séparer en deux fichiers */

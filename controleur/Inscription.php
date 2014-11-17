@@ -47,6 +47,7 @@ if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])) AND (!empty($_POST[
 
 }else
 	
-	echo "veuillez remplir tous les champs";
+	echo "veuillez remplir tous les champs";}
+	/*Penser à séparer en deux fichiers */
 ?>
-	
+
