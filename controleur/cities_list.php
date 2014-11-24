@@ -7,9 +7,11 @@
 
 <?php
 
-include '../include/connexion_PDO.php';
 
-$sql = "SELECT * FROM city ";//WHERE User_id = '$Player_id'";
+
+include 'connexion_PDO.php';
+
+$sql = "SELECT * FROM city WHERE User_id = '$Player_id'";
 	
 		foreach  ($connexion->query($sql) as $row) {
 		

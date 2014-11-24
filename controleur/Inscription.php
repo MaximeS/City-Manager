@@ -30,7 +30,7 @@ if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])) AND (!empty($_POST[
 		$pseudo = ($_POST['pseudo']);
 		$pass = ($_POST['password']);
 		
-		include '../include/connexion_PDO.php';
+		include 'connexion_PDO.php';
 	
 		$connexion->exec("INSERT INTO user VALUES ('', '$pseudo', md5('$pass'));");
 		
@@ -47,7 +47,7 @@ if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])) AND (!empty($_POST[
 
 }else
 	
-	echo "veuillez remplir tous les champs";}
+	echo "veuillez remplir tous les champs";
 	/*Penser à séparer en deux fichiers */
 ?>
 

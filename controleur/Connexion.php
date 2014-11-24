@@ -28,7 +28,7 @@ if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])))
 	$pseudo = $_POST['pseudo'];
 	$pass = $_POST['password'];
 	
-			include '../include/connexion_PDO.php';
+			include 'connexion_PDO.php';
 
 		$sth = $connexion->prepare("SELECT User_id FROM user WHERE Pseudo = '$pseudo' AND Password = md5('$pass') ");
 	
