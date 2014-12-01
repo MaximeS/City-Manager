@@ -2,7 +2,13 @@
 
 include '../include/connexion_PDO.php';
 
-
+function getniveau ($cityid, $connexion, $name)
+{
+	$requete = $connexion->prepare("SELECT '%name' FROM city WHERE City_id = '%$cityid%' LIMIT 1");
+	$requete->execute();
+	$result = $requete->fetch();
+	return $result['%name%'];
+}
 
 function getgold ($cityid, $connexion)
 {
