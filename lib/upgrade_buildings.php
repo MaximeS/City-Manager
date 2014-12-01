@@ -1,7 +1,7 @@
 <?php
 
-include '../controleur/connexion_PDO.php';
-require '../controleur/getvalues.php';
+include 'connexion_PDO.php';
+require 'getvalues.php';
 
 function error()
 {
