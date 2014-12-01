@@ -34,6 +34,11 @@
 */
 	include '../include/connexion_PDO'
 	
+	Public $IsFactory = False;
+	Public $IsBarracks = False;
+	Public $IsWall = False;
+	Public $IsSpy_Barracks = False;
+	
 	function Display_Factory
 	{
 		$stockfactory = $connexion ->prepare("SELECT Factory FROM city WHERE City_id = '%city_id%' ");
@@ -41,7 +46,7 @@
 		
 		if ($sqlfactory > 0)
 		{
-			echo "<img src="../image/Factory.jpg"/>"
+			$IsFactory = True;
 		}
 	}
 	
@@ -51,7 +56,7 @@
 		$sqlbarracks = $stockbarracks -> execute ();
 		if ($sqlbarracks > 0)
 		{
-			echo "<img src="../image/Barracks.jpg"/>"
+			$IsBarracks = True;
 		}
 	}
 	
@@ -61,7 +66,7 @@
 		$sqlwall = $stockwall -> execute ();
 		if ($sqlwall > 0)
 		{
-			echo "<img src="../image/Wall.jpg"/>"
+			$IsWall = True;
 		}
 	}
 	
@@ -71,7 +76,7 @@
 		$sqlspybarracks = $stockspybarracks -> execute ();
 		if ($sqlspybarracks > 0)
 		{
-			echo "<img src="../image/Spy_Barracks.jpg"/>"
+			$IsSpy_Barracks = True;
 		}
 	}
 	
