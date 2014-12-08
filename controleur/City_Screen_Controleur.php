@@ -32,51 +32,54 @@
 		echo "<img src="../image/Spy_Barracks.jpg"/>"
 	}
 */
-	include '../include/connexion_PDO'
+	include 'connexion_PDO'
 	
-	Public $IsFactory = False;
-	Public $IsBarracks = False;
-	Public $IsWall = False;
-	Public $IsSpy_Barracks = False;
-	
-	function Display_Factory
+	public function Display_Factory
 	{
+		$IsFactory = False;
+		
 		$stockfactory = $connexion ->prepare("SELECT Factory FROM city WHERE City_id = '%city_id%' ");
 		$sqlfactory = $stockfactory -> execute ();
 		
 		if ($sqlfactory > 0)
 		{
-			$IsFactory = True;
+			return $IsFactory = True;
 		}
 	}
 	
-	function Display_Barracks
+	public function Display_Barracks
 	{
+		$IsBarracks = False;
+		
 		$stockbarracks  = $connexion ->prepare("SELECT Barracks FROM city WHERE City_id = '%city_id%' ");
 		$sqlbarracks = $stockbarracks -> execute ();
 		if ($sqlbarracks > 0)
 		{
-			$IsBarracks = True;
+			return $IsBarracks = True;
 		}
 	}
 	
-	function Display_Wall
+	public function Display_Wall
 	{
+		$IsWall = False;
+		
 		$stockwall = $connexion ->prepare("SELECT Wall FROM city WHERE City_id = '%city_id%' ");
 		$sqlwall = $stockwall -> execute ();
 		if ($sqlwall > 0)
 		{
-			$IsWall = True;
+			return $IsWall = True;
 		}
 	}
 	
-	function Display_Spy_Barracks
+	public function Display_Spy_Barracks
 	{
+		$IsSpy_Barracks = False;
+		
 		$stockspybarracks = $connexion ->prepare("SELECT Spy_Barracks FROM city WHERE City_id = '%city_id%' ");
 		$sqlspybarracks = $stockspybarracks -> execute ();
 		if ($sqlspybarracks > 0)
 		{
-			$IsSpy_Barracks = True;
+			return $IsSpy_Barracks = True;
 		}
 	}
 	

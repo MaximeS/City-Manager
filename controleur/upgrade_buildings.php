@@ -30,6 +30,7 @@ function upgrade ($cityid, $connexion, $name)
 	{
 		modifiermoney ($cityid, $connexion, $name, $value);
 		modifierniveau ($cityid, $connexion, $name)
+		
 	}
 	else
 	{

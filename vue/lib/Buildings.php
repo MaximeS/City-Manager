@@ -1,5 +1,11 @@
 <meta charset="UTF-8">
 
+<?php
+
+include '../../controleur/upgrade_buildings.php';
+
+?>
+
 <fieldset>
 
 <legend><h2>Batiments</h2></legend>
