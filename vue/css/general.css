@@ -28,3 +28,7 @@ header
 	top: 50px;
 	background-color: #DFDFDF;
 }
+#body
+{
+	width: 100%;
+}

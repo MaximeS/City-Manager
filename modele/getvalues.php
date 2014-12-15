@@ -2,45 +2,45 @@
 
 include '../include/connexion_PDO.php';
 
-function getniveau ($cityid, $connexion, $name)
+function getniveau()
 {
-	$requete = $connexion->prepare("SELECT '%name' FROM city WHERE City_id = '%$cityid%' LIMIT 1");
-	$requete->execute();
+	$requete = $connexion->prepare("SELECT :name FROM city WHERE City_id = :city_id LIMIT 1");
+	$requete->execute(array('city_id'=>"%".$_SESSION["City_id"]."%","name"=>$name);
 	$result = $requete->fetch();
-	return $result['%name%'];
+	return $result['Name'];
 }
 
-function getgold ($cityid, $connexion)
+function getgold ()
 {
-	$requete = $connexion->prepare("SELECT Gold FROM city WHERE City_id = '%$cityid%' LIMIT 1");
-	$requete->execute();
+	$requete = $connexion->prepare("SELECT Gold FROM city WHERE City_id = :city_id LIMIT 1");
+	$requete->execute(array('city_id'=>"%".$_SESSION["City_id"]."%");
 	$result = $requete->fetch();
 	return $result['Gold'];
 	
 }
 
-function getsoldier ($cityid, $connexion)
+function getsoldier ()
 {
-	$requete = $connexion->prepare("SELECT Soldier FROM city WHERE City_id = '%$cityid%' LIMIT 1");
-	$requete->execute();
+	$requete = $connexion->prepare("SELECT Soldier FROM city WHERE City_id = :city_id LIMIT 1");
+	$requete->execute(array('city_id'=>"%".$_SESSION["City_id"]."%");
 	$result = $requete->fetch();
 	return $result[0];
 	
 }
 
-function getsoldier_s ($cityid, $connexion)
+function getsoldier_s ()
 {
-	$requete = $connexion->prepare("SELECT Soldier_s FROM city WHERE City_id = '%$cityid%' LIMIT 1");
-	$requete->execute();
+	$requete = $connexion->prepare("SELECT Soldier_s FROM city WHERE City_id = :city_id LIMIT 1");
+	$requete->execute(array('city_id'=>"%".$_SESSION["City_id"]."%");
 	$result = $requete->fetch();
 	return $result[0];
 	
 }
 
-function getgold_s ($cityid, $connexion)
+function getgold_s ()
 {
-	$requete = $connexion->prepare("SELECT Gold_s FROM city WHERE City_id = '%$cityid%' LIMIT 1");
-	$requete->execute();
+	$requete = $connexion->prepare("SELECT Gold_s FROM city WHERE City_id = :city_id LIMIT 1");
+	$requete->execute(array('city_id'=>"%".$_SESSION["City_id"]."%");
 	$result = $requete->fetch();
 	return $result[0];
 	

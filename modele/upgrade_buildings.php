@@ -8,28 +8,28 @@ function error()
 	echo"erreur";
 }
 
-function modifiermoney ($cityid, $connexion, $name, $value)
+function modifiermoney ($value)
 {
-	$requete = $connexion->prepare("UPDATE city SET {Gold = {Gold - '%$value%'}}")
-	$requete->execute();
+	$requete = $connexion->prepare("UPDATE city SET (Gold = (Gold - :value)) WHERE City_id=:city_id")
+	$requete->execute(array('value'=>$value,'city_id'=> $_SESSION['City_id']);
 }
 
-function modifierniveau ($cityid, $connexion, $name)
+function modifierniveau ($building)
 {
-	$requete = $connexion->prepare("UPDATE city SET {'%$name%' = {'%$name%' + 1}}")
-	$requete->execute();
+	$requete = $connexion->prepare("UPDATE city SET (:building = (:building + 1)")
+	$requete->execute(array('building'=>$building));
 }
 
-function upgrade ($cityid, $connexion, $name)
+function upgrade ($building)
 {
-	var $gold = getgold ($cityid, $connexion);
-	var $level = getniveau ($cityid, $connexion, $name);
+	var $gold = getgold ($connexion);
+	var $level = getniveau ($building);
 	var $value = ($level+50)*5
 	
 	if ($gold >= $value)
 	{
-		modifiermoney ($cityid, $connexion, $name, $value);
-		modifierniveau ($cityid, $connexion, $name)
+		modifiermoney ($value);
+		modifierniveau ($name)
 		
 	}
 	else
