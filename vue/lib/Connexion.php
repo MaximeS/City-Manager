@@ -5,7 +5,7 @@ Session_destroy();
 
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-<form name="form_connex" method="post" class="form-horizontal">
+<form name="form_connex" method="post" class="form-horizontal" action=">
 	<fieldset>
 		<legend><h2>Connexion</h2></legend>
 		<p>
