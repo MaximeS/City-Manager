@@ -1,0 +1,1 @@
+<h1> Vous êtes sur le profil de <?php echo $Pseudo ?> ! </h1>
