@@ -50,8 +50,12 @@
 	
 	})->name('contact')->conditions(['name' => '[a-zA-Z0-9]*']);
 
-	
-	$app->render('header.php', compact('app'));
+	if (!empty($_SESSION['Player_id'])){
+	$app->render('headerco.php', compact('app'));
+	}
+	else {
+	$app->render('headernoco.php', compact('app'));
+	}
 	$app->run();
 	$app->render('footer.php',  compact('app'));
 	
