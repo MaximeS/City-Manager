@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<link rel="stylesheet" media="screen" type="text/css" href="style.css"/>
+		<link rel="stylesheet" media="screen" type="text/css" href="vue/css/general.css"/>
 	</head>
 	<body>
 		<header id="headnoco">

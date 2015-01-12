@@ -81,3 +81,29 @@ header
 {
 	width: 100%;
 }
+
+.container
+{
+	position: absolute;
+	left: 300px;
+	width: 900px;
+	height: 120%;
+	border-radius: 10px 10px 10px 10px;
+	border: solid black 3px;
+	 box-shadow: 10px 10px 5px #888888;
+	 text-align: center;
+}
+
+.LeftMenu
+{
+	position: fixed;
+	left: 10px;
+	width: 200px;
+	height: 300px;
+	border-radius: 10px 10px 10px 10px;
+	border: solid black 3px;
+	 box-shadow: 5px 5px 5px #888888;
+
+
+
+}

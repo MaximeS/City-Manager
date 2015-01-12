@@ -1,4 +1,5 @@
-<link rel="stylesheet" type="text/css" href="vue/css/central.css">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="vue/css/general.css">
 
 <?php
 
