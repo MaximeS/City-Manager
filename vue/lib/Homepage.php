@@ -1,5 +1,11 @@
 <link rel="stylesheet" type="text/css" href="vue/css/central.css">
 
+<?php
+
+	$Player_pseudo = $_SESSION['Player_pseudo'];
+
+?>
+
 Bienvenue sur la homePage !
 
 <a href="controller/DestroySession.php"> deconnexion </a>
@@ -18,18 +24,20 @@ Bienvenue sur la homePage !
  
  </div>
 
- <a href="/City-Manager/hawk" > 
+ <a href="/City-Manager/<?php echo $Player_pseudo; ?>" > 
 <div class="LeftMenu"> 
 
 
-mon profil  
+mon profil  :
 
+</br>
+</br>
+<h1>
 <?php
 
-	echo $_SESSION['Player_id'];
-	echo $_SESSION['Player_pseudo'];
+	echo $Player_pseudo;
 ?>
-
+</h1>
 </div>
 </a>
 </br></br>
