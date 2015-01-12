@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 
-<form method="post" action="../../controller" >
+<form method="post" action="controller/CheckInscription.php" >
 	<fieldset>
 	<legend><h2>Inscription</h2></legend>
 	<p>
@@ -19,35 +19,16 @@
 	
 	</fieldset>
 	
-	
 <?php
+Session_start();
 
-if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])) AND (!empty($_POST['passcheck'])) AND(!empty($_POST['mail_adress'])))
-{
-	if (($_POST['password']) == ($_POST['passcheck']))
-	{
+
+if (!empty($_SESSION['Message'])){
 	
-		$pseudo = ($_POST['pseudo']);
-		$pass = ($_POST['password']);
+		$message = $_SESSION['Message'];
+		echo "<script> alert('$message'); </script>;";
 		
-		include 'connexion_PDO.php';
+		unset($_SESSION['Message']);
+	}	
 	
-		$connexion->exec("INSERT INTO user VALUES ('', '$pseudo', md5('$pass'));");
-		
-		echo "<font color='green'> votre compte a bien été ajouté ! </font>";
-
-
-
-	
-
-	}else
-	
-	echo "les mots de passe no correspondent pas";
-
-
-}else
-	
-	echo "veuillez remplir tous les champs";
-	/*Penser à séparer en deux fichiers */
 ?>
-

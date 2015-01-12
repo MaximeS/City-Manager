@@ -10,7 +10,7 @@ if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])))
 	
 	include '../modele/connexion_PDO.php';
 
-	$sql = "SELECT User_id FROM user WHERE Pseudo = '$pseudo' AND Password = md5('$pass') ";
+	$sql = "SELECT * FROM user WHERE Pseudo = '$pseudo' AND Password = md5('$pass') ";
 	
 	$sth = $connexion->prepare("SELECT User_id FROM user WHERE Pseudo = '$pseudo' AND Password = md5('$pass') ");
 	
@@ -30,6 +30,7 @@ if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])))
 		foreach  ($connexion->query($sql) as $row) {
 		
 			$_SESSION['Player_id'] = $row['User_id'];
+			$_SESSION['Player_pseudo'] = $row['Pseudo'];
 		
 		}
 		
