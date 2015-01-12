@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 
-<form method="post" action="../../controller >
+<form method="post" action="../../controller" >
 	<fieldset>
 	<legend><h2>Inscription</h2></legend>
 	<p>
@@ -15,7 +15,7 @@
 	</br>
 	<p><input type="submit" value="Inscription" /></p></form>
 	
-	<a href="/Projet-Transversal-Php/connexion"> déja membre ? </a>
+	<a href="/City-Manager/connexion"> déja membre ? </a>
 	
 	</fieldset>
 	

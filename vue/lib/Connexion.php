@@ -13,7 +13,7 @@
 		</br>
 		<p><input type="submit" value="Connexion" class="col-sm-offset-2 btn btn-default"/></p></form>
 		<br/>
-		<a href="/Projet-Transversal-Php/inscription"><input type="button" class="col-sm-offset-2 btn btn-default" value="pas encore membre ?">  </a>
+		<a href="/City-Manager/inscription"><input type="button" class="col-sm-offset-2 btn btn-default" value="pas encore membre ?">  </a>
 	</div>
 	
 	

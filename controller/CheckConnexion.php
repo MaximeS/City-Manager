@@ -35,15 +35,21 @@ if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])))
 		
 		echo $_SESSION['Player_id'];
 		
-		header('Location: /Projet-Transversal-Php/');
+		header('Location: /City-Manager/');
 
 
 
 
 	}else{
 	
-		header('Location: /Projet-Transversal-Php/');
+		header('Location: /City-Manager/');
 	
 	}
-}	
+}else{
+	
+		header('Location: /City-Manager/');
+	
+	}
+
+	
 ?>	
