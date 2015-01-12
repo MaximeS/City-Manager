@@ -30,7 +30,7 @@ if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])))
 		foreach  ($connexion->query($sql) as $row) {
 		
 			$_SESSION['Player_id'] = $row['User_id'];
-			$_SESSION['Player_pseudo'] = $row['User_pseudo'];
+			$_SESSION['Player_pseudo'] = $row['Pseudo'];
 		
 		}
 		
