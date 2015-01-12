@@ -10,7 +10,7 @@ a
 	position:relative;
 	background-color:#7B7F7E;
 	width:100%;
-	height:50px;
+	height:10%;
 }
 
 #headnoco a
@@ -23,8 +23,8 @@ a
 #links
 {
 	position:relative;
-	margin-left:1000px;
-	margin-top:-35px;
+	margin-left:75%;
+	margin-top:-43px;
 }
 
 #image
@@ -56,8 +56,6 @@ body
 }
 header
 {
-	position: fixed;
-	top: 10px;
 }
 #login
 {
