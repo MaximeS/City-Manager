@@ -1,3 +1,4 @@
+    <LINK href="/City-Manager/vue/css/general.css" rel="stylesheet" type="text/css">
 <?php
 
 
