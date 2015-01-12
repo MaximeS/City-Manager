@@ -1,10 +1,5 @@
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/general.css">
+<div color ="#FFFFFF" height="30px" background="#000000"> CECI EST UN HEADER ! </div>
 
-</head>
-<body>
-	<header><div id="login">Login</div></header>
-	
-	
+<a href="/SlimTry/"> retour a l'acceuil </a>
+
+</br> </br>

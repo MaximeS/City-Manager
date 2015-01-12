@@ -43,11 +43,10 @@
 	
 	
 	
-	$app->get('/:pseudo/:city', function($pseudo, $City) use ($app){
 	
-		$sql = "SELECT Pseudo FROM user";
+	$app->get('/:pseudo/:City', function($pseudo, $City) use ($app){
 	
-		$app->render('../../controller/controllerCity.php', array('pseudo'=>$pseudo), array('city'=>$City);
+		$app->render('../../controller/controllerCity.php', array('pseudo'=>$pseudo, 'City'=>$City));
 	
 	})->name('contact')->conditions(['name' => '[a-zA-Z0-9]*']);
 
