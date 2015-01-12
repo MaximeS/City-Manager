@@ -1,6 +1,7 @@
 <h1> Vous êtes sur le profil de <?php echo $Pseudo ?> ! </h1>
 
 <?php
+include "../../modele/profil.php";
 foreach ($cities as $city) {
 	echo "<div>".$city['Name']."<br>"
 	.$city['Gold_S']."<br>"
