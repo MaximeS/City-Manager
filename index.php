@@ -54,4 +54,15 @@
 	$app->render('header.php', compact('app'));
 	$app->run();
 	$app->render('footer.php',  compact('app'));
+	
+	
+	
+	
+	if (!empty($_SESSION['Message'])){
+	
+		$message = $_SESSION['Message'];
+		echo "<script> alert('$message'); </script>;";
+		
+		unset($_SESSION['Message']);
+	}
 ?>
