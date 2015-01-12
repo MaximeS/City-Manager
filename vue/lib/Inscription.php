@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 
-<form method="post" action="../../controller >
+<form method="post" action="../../controller">
 	<fieldset>
 	<legend><h2>Inscription</h2></legend>
 	<p>
