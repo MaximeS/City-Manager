@@ -10,11 +10,8 @@
 				</a>
 			</div>
 			<div id="links">
-				<a id="connection" href="/City-Manager/connexion">
-					connectez vous
-				</a>
-				<a id="inscription" href="/City-Manager/inscription">
-					non inscrit ?
+				<a id="profil" href="">
+					Profil
 				</a>
 			</div>
 		</header>
