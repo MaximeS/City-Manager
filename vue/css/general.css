@@ -5,6 +5,7 @@ body
 	font-family: Comfortaa;
 	margin: 0;
 	padding:0;
+	background-color: #cccccc;
 }
 
 header
@@ -15,6 +16,7 @@ a
 {	
 	position:relative;
 	text-decoration:none;
+	color: black;
 }
 
 #headnoco
@@ -96,6 +98,7 @@ a
 	 box-shadow: 10px 10px 5px #888888;
 	 text-align: center;
 	 text-transform: capitalize;
+	 background-color: #FFFFFF;
 }
 
 
@@ -112,6 +115,8 @@ a
 	 box-shadow: 10px 10px 5px #888888;
 	 text-align: center;
 	 text-transform: capitalize;
+	 color:#D1E8D7;
+	 background-color:#7B7F7E;
 }
 
 .LeftMenu
@@ -124,7 +129,7 @@ a
 	border: solid black 3px;
 	 box-shadow: 5px 5px 5px #888888;
 	 text-transform: capitalize;
-
+	background-color: #FFFFFF;
 
 
 }
@@ -140,7 +145,7 @@ a
 	 box-shadow: 5px 5px 5px #888888;
 	text-align: center;
 	text-transform: capitalize;
-
+	background-color: #FFFFFF;
 
 }
 
@@ -153,7 +158,7 @@ a
 	 position: relative;
 	 display: inline-block;
 	 text-transform: capitalize;
-
+	 background-color: #EEEEEE;
 
 }
 
@@ -167,6 +172,6 @@ a
 	 display: inline-block;
 	 font-size: 18;
 	 text-transform: capitalize;
-	 
+	 background-color: #EEEEEE;
 
 }
