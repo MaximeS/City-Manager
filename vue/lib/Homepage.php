@@ -32,22 +32,23 @@
  </div>
 
  <a href="/City-Manager/<?php echo $Player_pseudo; ?>" > 
-<div class="LeftMenu"> 
+<div class="LeftMenuB"> 
 
 
 mon profil  :
 
 </br>
 </br>
-<h1>
+ 
+	<h1>
 <?php
 
-	echo "<h3>".$Player_pseudo."</h3>";
+	echo "<h2>".$Player_pseudo."</h2>";
 	
 	include "modele/profilvalues.php";
 	
-	echo "Or total :".totalgold($Player_id, $connexion)."</br>";
-	echo "total des armées :".totalSoldier($Player_id, $connexion)."</br>";
+	echo "<b> Or total : </b> ".totalgold($Player_id, $connexion)."</br>";
+	echo " <b> total des armées : </b>".totalSoldier($Player_id, $connexion)."</br>";
 	
 ?>
 </h1>

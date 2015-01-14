@@ -95,6 +95,7 @@ a
 	border: solid black 3px;
 	 box-shadow: 10px 10px 5px #888888;
 	 text-align: center;
+	 text-transform: capitalize;
 }
 
 
@@ -122,6 +123,7 @@ a
 	border-radius: 10px 10px 10px 10px;
 	border: solid black 3px;
 	 box-shadow: 5px 5px 5px #888888;
+	 text-transform: capitalize;
 
 
 
@@ -137,6 +139,7 @@ a
 	border: solid black 3px;
 	 box-shadow: 5px 5px 5px #888888;
 	text-align: center;
+	text-transform: capitalize;
 
 
 }
@@ -149,6 +152,7 @@ a
 	 width: 400px;
 	 position: relative;
 	 display: inline-block;
+	 text-transform: capitalize;
 
 
 }
@@ -162,6 +166,7 @@ a
 	 position: relative;
 	 display: inline-block;
 	 font-size: 18;
+	 text-transform: capitalize;
 	 
 
 }
