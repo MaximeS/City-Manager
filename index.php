@@ -36,16 +36,26 @@ Session_start();
 	});
 	
 	$app->get('/addcity', function() use ($app){
-	
-		$app->render('Add_city.php');
+		
+		if (!empty($_SESSION['Player_id'])){
+			$app->render('Add_city.php');
+		}
+		else{
+			$app->render('Connexion.php');
+		}
 	
 	});
 	
 	$app->get('/:pseudo', function($pseudo) use ($app){
 	
 		$sql = "SELECT Pseudo FROM user";
-	
-		$app->render('../../controller/ControllerProfil.php', array('pseudo'=>$pseudo));
+		
+		if (!empty($_SESSION['Player_id'])){
+			$app->render('../../controller/ControllerProfil.php', array('pseudo'=>$pseudo));
+		}
+		else{
+			$app->render('Connexion.php');
+		}
 	
 	})->name('contact')->conditions(['name' => '[a-zA-Z0-9]*']);
 	

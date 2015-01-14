@@ -1,4 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Comfortaa);
+
+body
+{
+	font-family: Comfortaa;
+	margin: 0;
+	padding:0;
+}
+
+header
+{
+}
+
 a
 {	
 	position:relative;
@@ -11,6 +23,7 @@ a
 	background-color:#7B7F7E;
 	width:100%;
 	height:10%;
+	 box-shadow: -1px 5px 6px #666666;
 }
 
 #headnoco a
@@ -48,15 +61,6 @@ a
 	width:100%;
 }
 
-body
-{
-	font-family: Comfortaa;
-	margin: 0;
-	padding:0;
-}
-header
-{
-}
 #login
 {
 	position: relative;
@@ -83,13 +87,30 @@ header
 .container
 {
 	position: absolute;
+	top: 300px;
 	left: 300px;
 	width: 900px;
-	height: 120%;
+	height: auto;
 	border-radius: 10px 10px 10px 10px;
 	border: solid black 3px;
 	 box-shadow: 10px 10px 5px #888888;
 	 text-align: center;
+}
+
+
+
+.PageName
+{
+	position: absolute;
+	top: 180px;
+	left: 300px;
+	width: 900px;
+	height: auto;
+	border-radius: 10px 10px 10px 10px;
+	border: solid black 3px;
+	 box-shadow: 10px 10px 5px #888888;
+	 text-align: center;
+	 text-transform: capitalize;
 }
 
 .LeftMenu
@@ -103,5 +124,44 @@ header
 	 box-shadow: 5px 5px 5px #888888;
 
 
+
+}
+
+.LeftMenuB
+{
+	position: absolute;
+	left: 10px;
+	width: 200px;
+	height: 300px;
+	border-radius: 10px 10px 10px 10px;
+	border: solid black 3px;
+	 box-shadow: 5px 5px 5px #888888;
+	text-align: center;
+
+
+}
+
+.citydiv
+{
+	border-radius: 10px 10px 10px 10px;
+	border: solid black 3px;
+	 box-shadow: 5px 5px 5px #888888;
+	 width: 400px;
+	 position: relative;
+	 display: inline-block;
+
+
+}
+
+.MenuButton
+{
+	border: solid black 3px;
+	 box-shadow: 5px 5px 5px #888888;
+	 width: 170px;
+	 height: 30px;
+	 position: relative;
+	 display: inline-block;
+	 font-size: 18;
+	 
 
 }
