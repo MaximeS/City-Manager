@@ -10,9 +10,14 @@
 				</a>
 			</div>
 			<div id="links">
-				<a id="profil" href="">
+				<a id="profil" href="/City-Manager/<?php echo $_SESSION['Player_pseudo']; ?>">
 					Profil
 				</a>
+				
+				<a id="inscription" href="controller/DestroySession.php">
+					déconnexion
+				</a>
+				
 			</div>
 		</header>
 	</body>

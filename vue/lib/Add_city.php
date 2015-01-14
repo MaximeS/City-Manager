@@ -37,8 +37,8 @@ if(!empty($_POST['new_city_name']) AND isset($_POST['new_city_name']) )
 	
 
 
-}
+}else
 	
-
+	echo "veuillez remplir tous les champs";
 	/*Penser à séparer en deux fichiers */
 ?>

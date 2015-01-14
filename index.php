@@ -1,6 +1,7 @@
-    <LINK href="/City-Manager/vue/css/general.css" rel="stylesheet" type="text/css">
+<LINK href="/City-Manager/vue/css/general.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
 <?php
-
+Session_start();
 
 
 	// require composer autoload (load all my libraries)
@@ -31,6 +32,12 @@
 	$app->get('/inscription', function() use ($app){
 	
 		$app->render('Inscription.php');
+	
+	});
+	
+	$app->get('/addcity', function() use ($app){
+	
+		$app->render('Add_city.php');
 	
 	});
 	

@@ -1,6 +1,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
+</br></br>
 <form method="post" action="controller/CheckInscription.php" class="form-horizontal" >
 	<fieldset>
 	<legend><h2>Inscription</h2></legend>
@@ -22,7 +23,6 @@
 	</fieldset>
 	
 <?php
-Session_start();
 
 
 if (!empty($_SESSION['Message'])){

@@ -16,3 +16,15 @@ foreach ($cities as $city) {
 	
 
 ;?>
+
+	<div class="container">
+ 
+ <h1> <?php echo $Pseudo ?> </h1>
+ 
+ </br></br>
+ 
+ Vous êtes sur le profil de <?php echo $Pseudo ?> !
+
+ 
+ 
+ </div>
