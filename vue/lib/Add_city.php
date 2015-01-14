@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 
-<form method="post" >
+<form method="post" action="modele/add_city.php" >
 	<fieldset>
 	<legend><h2>Créer une nouvelle ville</h2></legend>
 	<p>
@@ -24,9 +24,9 @@ if(!empty($_POST['new_city_name']) AND isset($_POST['new_city_name']) )
 		
 		include 'connexion_PDO.php';
 	
-		$connexion->exec("INSERT INTO city VALUES ('', '$name','','','','','','','','','$Player_id');");
+		$connexion->exec("INSERT INTO city VALUES ('', '$name','500','0','0','0','','0','0.1','0','$Player_id');");
 		
-		echo "<font color='green'> votre ville a bien été créée ! </font>";
+		
 
 
 
@@ -37,8 +37,8 @@ if(!empty($_POST['new_city_name']) AND isset($_POST['new_city_name']) )
 	
 
 
-}else
+}
 	
-	echo "veuillez remplir tous les champs";
+
 	/*Penser à séparer en deux fichiers */
 ?>
