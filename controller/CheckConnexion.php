@@ -43,11 +43,13 @@ if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])))
 
 	}else{
 	
+		$_SESSION['Message'] = " Erreur : Nom de compte et/ou mot de passe incorrect";
+	
 		header('Location: /City-Manager/');
 	
 	}
 }else{
-	
+		$_SESSION['Message'] = " Erreur : Veuillez remplir tous les champs";
 		header('Location: /City-Manager/');
 	
 	}

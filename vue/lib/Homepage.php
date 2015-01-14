@@ -27,7 +27,7 @@
  
  Bienvenue sur la homePage ! 
 
- 
+ </br></br>
  
  </div>
 
@@ -35,7 +35,7 @@
 <div class="LeftMenuB"> 
 
 
-mon profil  :
+<u>mon profil  :</u>
 
 </br>
 </br>
