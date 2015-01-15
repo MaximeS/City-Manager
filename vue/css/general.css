@@ -197,3 +197,36 @@ a
 	 background-color: #EEEEEE;
 
 }
+
+
+.LeftMenuR
+{
+	position: fixed;
+	right: 10px;
+	width: 300px;
+	height: auto;
+	border-radius: 10px 10px 10px 10px;
+	border: solid black 3px;
+	 box-shadow: 5px 5px 5px #888888;
+	text-align: center;
+	text-transform: capitalize;
+	background-color: #FFFFFF;
+
+}
+
+
+.MenuButtonR
+{
+	border: solid black 3px;
+	 box-shadow: 5px 5px 5px #888888;
+	 width: 250px;
+	 height: auto;
+	 position: relative;
+	 display: inline-block;
+	 font-size: 18;
+	 text-transform: capitalize;
+	 background-color: #EEEEEE;
+	 border-radius: 10px 10px 10px 10px;
+
+}
+

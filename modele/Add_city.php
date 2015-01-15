@@ -23,7 +23,7 @@ if(!empty($_POST['new_city_name']) AND isset($_POST['new_city_name']) )
 		
 		
 	
-		$connexion->exec("INSERT INTO city VALUES ('', '$name','500','0','0','0','','0','0.1','0','$Player_id');");
+		$connexion->exec("INSERT INTO city VALUES ('', '$name','500','0','0','0','','0','1','0','$Player_id');");
 		
 		$pseudo = $_SESSION["Player_pseudo"];
 		
