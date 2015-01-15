@@ -64,6 +64,6 @@ foreach ($cities as $city) {
 	</br>
 	<a href="/City-Manager/addcity"> <div class="MenuButton"> nouvelle ville  </div> </a>
 	</br></br>
-	<a href="/City-Manager/addcity"> <div class="MenuButton"> raser une ville  </div> </a>
+	<a href="/City-Manager/erasecity"> <div class="MenuButton"> raser une ville  </div> </a>
 	</br>
  </div>
