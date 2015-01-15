@@ -76,7 +76,8 @@ CREATE TABLE IF NOT EXISTS `Messages` (
 CREATE TABLE IF NOT EXISTS `News` (
   `News_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `Title` varchar(20) DEFAULT NULL,
-  `Content` varchar(500) DEFAULT NULL
+  `Content` varchar(500) DEFAULT NULL,
+  `Date` date DEFAULT NULL 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

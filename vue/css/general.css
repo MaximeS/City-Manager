@@ -161,6 +161,27 @@ a
 	 background-color: #EEEEEE;
 
 }
+.newsdiv
+{
+	border-radius: 10px 10px 10px 10px;
+	border: solid black 3px;
+	 box-shadow: 5px 5px 5px #888888;
+	 width: 400px;
+	 height:auto;
+	 position: relative;
+	 display: inline-block;
+	 text-transform: capitalize;
+	 background-color: #EEEEEE;
+
+}
+.newsdiv h2 
+{
+	margin : 0 auto;
+}
+.newsdiv h4
+{
+	margin: 0 auto;
+}
 
 .MenuButton
 {

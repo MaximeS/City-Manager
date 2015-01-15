@@ -10,7 +10,7 @@ function GetNewsDatabase()
 	return $News_id2;
 };
 
-function PrintNews($News_id2)
+/*function PrintNews($News_id2)
 {
 	include 'connexion_PDO.php';
 	$i=0;
@@ -27,7 +27,7 @@ function PrintNews($News_id2)
 	   ";
 	}
 	unset($value);
-}
+}*/
 GetNewsDatabase();
-PrintNews(GetNewsDatabase());
+//PrintNews(GetNewsDatabase());
 ?>

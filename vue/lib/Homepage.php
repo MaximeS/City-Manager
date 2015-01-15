@@ -25,7 +25,30 @@
  
  </br></br>
  
- Bienvenue sur la homePage ! 
+ <h2> News : </h2>
+
+ </br>
+ <?php
+include "modele/News.php";
+include 'modele/connexion_PDO.php';
+	
+	$i=0;
+	while ($i<count(GetNewsDatabase()))
+	{
+	$i++;
+	$NewsData = $connexion->prepare('SELECT Title, Content, Date FROM news WHERE News_id=' . $i.' ORDER BY `Date`');
+	$NewsData->execute();
+	$News = $NewsData->fetch();
+	echo "<div class='newsdiv'>
+		".$News['Date'] ." <h2><u>". $News['Title'] . "</u></h2><br>
+		 <h4>" . $News['Content'] . "</h4><br>
+		</div><br/><br/>
+	   ";
+	}
+	unset($value);
+
+;?>
+</br></br>
 
  </br></br>
  

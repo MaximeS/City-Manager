@@ -88,4 +88,5 @@ Session_start();
 		
 		unset($_SESSION['Message']);
 	}
+	
 ?>
