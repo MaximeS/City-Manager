@@ -32,13 +32,12 @@
 include "modele/News.php";
 include 'modele/connexion_PDO.php';
 	
-	$i=0;
-	while ($i<count(GetNewsDatabase()))
+	$NewsBDD=GetNewsDatabase();
+	foreach ($NewsBDD as $News)
 	{
-	$i++;
-	$NewsData = $connexion->prepare('SELECT Title, Content, Date FROM news WHERE News_id=' . $i.' ORDER BY `Date`');
-	$NewsData->execute();
-	$News = $NewsData->fetch();
+	//$NewsData = $connexion->prepare('SELECT Title, Content, Date FROM news ORDER BY `Date`');
+	//$NewsData->execute();
+	//$News = $NewsData->fetch();
 	echo "<div class='newsdiv'>
 		".$News['Date'] ." <h2><u>". $News['Title'] . "</u></h2><br>
 		 <h4>" . $News['Content'] . "</h4><br>
