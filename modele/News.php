@@ -4,20 +4,19 @@ include 'connexion_PDO.php';
 function GetNewsDatabase()
 { 
 	include 'connexion_PDO.php';
-	$News_idBDD = $connexion->prepare('SELECT News_id, Title FROM news');
-	$News_idBDD->execute();
-	$News_id2 = $News_idBDD->fetchAll();
-	return $News_id2;
+	$NewsBDD = $connexion->prepare('SELECT * FROM news ORDER BY Date');
+	$NewsBDD->execute();
+	$News2 = $NewsBDD->fetchAll();
+	return $News2;
 };
 
 /*function PrintNews($News_id2)
 {
 	include 'connexion_PDO.php';
 	$i=0;
-	while ($i<count($News_id2))
+	foreach ($News_id2 as $id)
 	{
-	$i++;
-	$NewsData = $connexion->prepare('SELECT Title, Content FROM news WHERE News_id=' . $i);
+	$NewsData = $connexion->prepare('SELECT Title, Content, Date FROM news ORDER BY Date');
 	$NewsData->execute();
 	$News = $NewsData->fetch();
 	echo "<div class='news'>
@@ -28,6 +27,7 @@ function GetNewsDatabase()
 	}
 	unset($value);
 }*/
-GetNewsDatabase();
+
+//GetNewsDatabase();
 //PrintNews(GetNewsDatabase());
 ?>
