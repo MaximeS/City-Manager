@@ -1,5 +1,7 @@
+<LINK href="/City-Manager/vue/css/general.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
 <?php
-
+Session_start();
 
 
 	// require composer autoload (load all my libraries)
@@ -33,11 +35,27 @@
 	
 	});
 	
+	$app->get('/addcity', function() use ($app){
+		
+		if (!empty($_SESSION['Player_id'])){
+			$app->render('Add_city.php');
+		}
+		else{
+			$app->render('Connexion.php');
+		}
+	
+	});
+	
 	$app->get('/:pseudo', function($pseudo) use ($app){
 	
 		$sql = "SELECT Pseudo FROM user";
-	
-		$app->render('../../controller/ControllerProfil.php', array('pseudo'=>$pseudo));
+		
+		if (!empty($_SESSION['Player_id'])){
+			$app->render('../../controller/ControllerProfil.php', array('pseudo'=>$pseudo));
+		}
+		else{
+			$app->render('Connexion.php');
+		}
 	
 	})->name('contact')->conditions(['name' => '[a-zA-Z0-9]*']);
 	
@@ -51,7 +69,23 @@
 	})->name('contact')->conditions(['name' => '[a-zA-Z0-9]*']);
 
 	
-	$app->render('header.php', compact('app'));
+	if (!empty($_SESSION['Player_id'])){
+	$app->render('headerco.php', compact('app'));
+	}
+	else {
+	$app->render('headernoco.php', compact('app'));
+	}
 	$app->run();
 	$app->render('footer.php',  compact('app'));
+	
+	
+	
+	
+	if (!empty($_SESSION['Message'])){
+	
+		$message = $_SESSION['Message'];
+		echo "<script> alert('$message'); </script>;";
+		
+		unset($_SESSION['Message']);
+	}
 ?>

@@ -1,34 +1,51 @@
-<meta charset="UTF-8">
 
-<form method="post" >
-	<fieldset>
-	<legend><h2>Créer une nouvelle ville</h2></legend>
-	<p>
-	<label for="new_city_name">Nom de la nouvelle ville :</label> </br> <input name="new_city_name" type="text" id="new_city_name" /></br> </br>
-	
-	
-	</br>
-	<p><input type="submit" value="Créer !" /></p></form>
-	
-	
-	
-	</fieldset>
-	
-	
 <?php
+Session_start();
 
 if(!empty($_POST['new_city_name']) AND isset($_POST['new_city_name']) )
 {
+	include 'connexion_PDO.php';
+	
+	$newname = $_POST['new_city_name'];
+	
+	
+	$sql = $connexion->prepare("SELECT Name FROM city WHERE Name = '$newname'");
+	$sql->execute();
+	$result = $sql->fetchAll();
+	
+	$count = count($result);
+	
+	if ($count <= 0)
+	{
 	
 		$name = ($_POST['new_city_name']);
+		$Player_id = $_SESSION["Player_id"];
 		
-		include 'connexion_PDO.php';
-	
-		$connexion->exec("INSERT INTO city VALUES ('', '$name','','','','','','','','','$Player_id');");
 		
-		echo "<font color='green'> votre ville a bien été créée ! </font>";
+	
+		$connexion->exec("INSERT INTO city VALUES ('', '$name','500','0','0','0','','0','0.1','0','$Player_id');");
+		
+		$pseudo = $_SESSION["Player_pseudo"];
+		
+		
+		$_SESSION['Message'] = " Félicitations : La ville a bien été créée !";
+		echo "ok";
+		header('Location: /City-Manager/'.$pseudo);
+	}
+	
+	else{
+	
+		$_SESSION['Message'] = " Erreur : Le nom \"'$newname'\" est déja pris !";
+		echo "déja pris";
+		header('Location: /City-Manager/addcity');
+		
+	}
+	
+}else{
 
-
+	header('Location: /City-Manager/addcity');
+	echo "pas de var";
+}
 
 	
 
@@ -37,8 +54,8 @@ if(!empty($_POST['new_city_name']) AND isset($_POST['new_city_name']) )
 	
 
 
-}else
+
 	
-	echo "veuillez remplir tous les champs";
+
 	/*Penser à séparer en deux fichiers */
 ?>

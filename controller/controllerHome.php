@@ -1,5 +1,5 @@
 <?php
-Session_Start();
+
 
 	if (!empty($_SESSION['Player_id'])) {	
 	

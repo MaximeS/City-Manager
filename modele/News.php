@@ -1,9 +1,9 @@
 <meta charset="UTF-8">
 <?php
-include '../../controleur/connexion_PDO.php';
+include 'connexion_PDO.php';
 function GetNewsDatabase()
 { 
-	include '../../controleur/connexion_PDO.php';
+	include 'connexion_PDO.php';
 	$News_idBDD = $connexion->prepare('SELECT News_id, Title FROM news');
 	$News_idBDD->execute();
 	$News_id2 = $News_idBDD->fetchAll();
@@ -12,7 +12,7 @@ function GetNewsDatabase()
 
 function PrintNews($News_id2)
 {
-	include '../../controleur/connexion_PDO.php';
+	include 'connexion_PDO.php';
 	$i=0;
 	while ($i<count($News_id2))
 	{

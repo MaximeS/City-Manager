@@ -2,6 +2,8 @@
 
 require 'modele/connexion_PDO.php';
 
+if (!empty($_SESSION['Player_id'])){
+
 if(!empty($pseudo))
 {	
 	$sth = "SELECT * FROM user WHERE Pseudo = '$pseudo'";
@@ -31,8 +33,13 @@ if(!empty($pseudo))
 		include "vue/lib/NoProfil.php"; 
 	
 	}
-	
-	
-	
+
 }	
+}else{
+
+
+
+}	
+	
+	
 ?>	

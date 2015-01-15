@@ -1,7 +1,8 @@
 
-
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+</br></br>
 <form name="form_connex" method="post" class="form-horizontal" action="controller/CheckConnexion.php">
 	<fieldset>
 		<legend><h2>Connexion</h2></legend>
