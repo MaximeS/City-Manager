@@ -43,6 +43,15 @@ Session_start();
 		else{
 			$app->render('Connexion.php');
 		}
+	});	
+		$app->get('/erasecity', function() use ($app){
+		
+		if (!empty($_SESSION['Player_id'])){
+			$app->render('Erase_city.php');
+		}
+		else{
+			$app->render('Connexion.php');
+		}
 	
 	});
 	
