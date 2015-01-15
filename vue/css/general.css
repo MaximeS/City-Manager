@@ -166,13 +166,13 @@ a
 {
 	border-radius: 10px 10px 10px 10px;
 	border: solid black 3px;
-	 box-shadow: 5px 5px 5px #888888;
-	 width: 400px;
-	 height:auto;
-	 position: relative;
-	 display: inline-block;
-	 text-transform: capitalize;
-	 background-color: #EEEEEE;
+	box-shadow: 5px 5px 5px #888888;
+	width: 400px;
+	height:auto;
+	text-transform: none;
+	position: relative;
+	display: inline-block;
+	background-color: #EEEEEE;
 
 }
 .newsdiv h2 

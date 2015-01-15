@@ -4,7 +4,7 @@ include 'connexion_PDO.php';
 function GetNewsDatabase()
 { 
 	include 'connexion_PDO.php';
-	$NewsBDD = $connexion->prepare('SELECT * FROM news ORDER BY Date');
+	$NewsBDD = $connexion->prepare('SELECT * FROM news ORDER BY Date DESC LIMIT 20');
 	$NewsBDD->execute();
 	$News2 = $NewsBDD->fetchAll();
 	return $News2;
