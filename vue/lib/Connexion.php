@@ -20,4 +20,17 @@
 	
 </fieldset>
 
+<?php
+
+
+if (!empty($_SESSION['Message'])){
+	
+		$message = $_SESSION['Message'];
+		echo "<script> alert('$message'); </script>";
+		
+		unset($_SESSION['Message']);
+	}	
+	
+?>
+
 

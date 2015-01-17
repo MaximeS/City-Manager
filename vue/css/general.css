@@ -123,7 +123,7 @@ a
 {
 	position: fixed;
 	left: 10px;
-	width: 200px;
+	width: 250px;
 	height: 300px;
 	border-radius: 10px 10px 10px 10px;
 	border: solid black 3px;
@@ -137,8 +137,9 @@ a
 .LeftMenuB
 {
 	position: absolute;
+	top: 300px;
 	left: 10px;
-	width: 200px;
+	width: 250px;
 	height: 300px;
 	border-radius: 10px 10px 10px 10px;
 	border: solid black 3px;
@@ -154,7 +155,7 @@ a
 	border-radius: 10px 10px 10px 10px;
 	border: solid black 3px;
 	 box-shadow: 5px 5px 5px #888888;
-	 width: 400px;
+	 width: 600px;
 	 position: relative;
 	 display: inline-block;
 	 text-transform: capitalize;
@@ -162,12 +163,61 @@ a
 	 padding-left: 5px;
 
 }
+
+.cityInfo
+{
+	border-radius: 10px 10px 10px 10px;
+	border: solid black 3px;
+	 box-shadow: 5px 5px 5px #888888;
+	 width: 600px;
+	 position: relative;
+	 display: inline-block;
+	 text-transform: capitalize;
+	 background-color: #EEEEEE;
+	 padding-left: 5px;
+	 font-size: 18;
+
+}
+
+.Info
+{
+	border-radius: 10px 10px 10px 10px;
+	border: solid black 3px;
+	 box-shadow: 5px 5px 5px #888888;
+	 width: 500px;
+	 position: relative;
+	 display: inline-block;
+	 text-transform: capitalize;
+	 background-color: #DDDDDD;
+	 padding-left: 5px;
+	 font-size: 15;
+	 text-align: left;
+
+}
+
+.InfoVar
+{
+
+	 width: 300px;
+	 height: 30px;
+	 position: absolute;
+	 left: 200px;
+	 display: inline-block;
+	 text-transform: capitalize;
+
+	 padding-left: 5px;
+	 font-size: 22;
+	 text-align: left;
+
+}
+
+
 .newsdiv
 {
 	border-radius: 10px 10px 10px 10px;
 	border: solid black 3px;
 	box-shadow: 5px 5px 5px #888888;
-	width: 400px;
+	width: 600px;
 	height:auto;
 	text-transform: none;
 	position: relative;
@@ -199,10 +249,11 @@ a
 }
 
 
-.LeftMenuR
+.RightMenu
 {
-	position: fixed;
-	right: 10px;
+	position: absolute;
+	top : 300px;
+	left: 1250px;
 	width: 300px;
 	height: auto;
 	border-radius: 10px 10px 10px 10px;

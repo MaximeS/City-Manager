@@ -1,5 +1,5 @@
 <?php
-
+Session_start();
 
 
 if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])))
@@ -42,15 +42,15 @@ if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])))
 
 
 	}else{
+
+		$_SESSION['Message'] = " Erreur : Nom de compte ou mot de passe incorrect !";
 	
-		$_SESSION['Message'] = " Erreur : Nom de compte et/ou mot de passe incorrect";
-	
-		header('Location: /City-Manager/');
+		header('Location: /City-Manager/connexion');
 	
 	}
 }else{
 		$_SESSION['Message'] = " Erreur : Veuillez remplir tous les champs";
-		header('Location: /City-Manager/');
+		header('Location: /City-Manager/connexion');
 	
 	}
 

@@ -39,7 +39,7 @@ if(!empty($pseudo) AND  !empty($City))
 					$City_name = $row2['Name'];
 					$City_id = $row2['City_id'];
 					
-					echo $City_name;					
+										
 					include "vue/lib/City.php";
 				}
 		

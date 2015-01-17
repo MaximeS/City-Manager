@@ -13,12 +13,14 @@
 
 <div class="container">
  
+	</br></br>
+	<img src="vue/images/charaleft.png" width="200px" > <img src="vue/images/character.png" width="300px" border="5px solid black"/> <img src="vue/images/chararight.png" width="200px" >
+	</br> </br> </br>
+	
+	
  <h2> Liste des villes : </h2>
  
- </br>
- 
- 
- </br></br>
+
  <?php
 include "modele/profil.php";
 foreach ($cities as $city) {

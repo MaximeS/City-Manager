@@ -53,7 +53,7 @@ foreach ($cities as $city) {
 if (!empty($_SESSION['Message'])){
 	
 		$message = $_SESSION['Message'];
-		echo "<script> alert('$message'); </script>;";
+		echo "<script> alert('$message'); </script>";
 		
 		unset($_SESSION['Message']);
 	}	

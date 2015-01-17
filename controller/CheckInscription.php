@@ -13,6 +13,8 @@ if(!empty($_POST['pseudo']) AND (!empty($_POST['password'])) AND (!empty($_POST[
 	
 		$connexion->exec("INSERT INTO user VALUES ('', '$pseudo', md5('$pass'));");
 		
+		$connexion->exec("INSERT INTO news VALUES ('', 'nouveau joueur : $pseudo','Un nouveau joueur a rejoins l\'aventure !',NOW());");
+		
 		echo "<font color='green'> votre compte a bien été ajouté ! </font>";
 
 		$_SESSION['Message'] = " Félicitations ! votre compte a bien été ajouté !";

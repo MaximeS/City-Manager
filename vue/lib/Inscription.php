@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
 
-<form method="post" action="../../controller">
+<form method="post" action="controller/CheckInscription.php">
 
-<form method="post" action="../../controller" >
+<form method="post" action="controller/CheckInscription.php" >
 
 
 </br></br>
@@ -23,7 +23,7 @@
 	
 	</p>
 	</br>
-	<p><input type="submit" value="Inscription" class="col-sm-offset-2 btn btn-default"/></p></form>
+	<p><input type="submit" value="Inscription" class="col-sm-offset-2 btn btn-default"/></p> </form>
 	
 	<a href="/City-Manager/connexion" class="col-sm-offset-2 btn btn-default"> déja membre ? </a>
 	</div>
@@ -35,7 +35,7 @@
 if (!empty($_SESSION['Message'])){
 	
 		$message = $_SESSION['Message'];
-		echo "<script> alert('$message'); </script>;";
+		echo "<script> alert('$message'); </script>";
 		
 		unset($_SESSION['Message']);
 	}	

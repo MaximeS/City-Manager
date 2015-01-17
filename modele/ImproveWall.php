@@ -15,20 +15,20 @@ if(!empty($_POST['city_id']) AND !empty($_POST['city_name']) AND !empty($_POST['
 		
 		$sth = $connexion->exec("UPDATE city SET Gold = (Gold - $cost) WHERE City_id = $city_id");
 		
-		$sth2 = $connexion->exec("UPDATE city SET Factory = (Factory + 1) WHERE City_id = $city_id");
+		$sth2 = $connexion->exec("UPDATE city SET Wall = (Wall + 1) WHERE City_id = $city_id");
 		
-		$sth3 = $connexion->exec("UPDATE city SET Gold_s = (Gold_s * 2)  WHERE City_id = $city_id");
+		$sth2 = $connexion->exec("UPDATE city SET life = (life +500) WHERE City_id = $city_id");
 		
-		$connexion->exec("INSERT INTO news VALUES ('', '$name : amélioration','L\'usine a été améliorée !',NOW());");
+		$connexion->exec("INSERT INTO news VALUES ('', '$name : amélioration','Les remparts ont été améliorés !',NOW());");
 		
-		$_SESSION['Message'] = "L\'usine a été améliorée !";
+		$_SESSION['Message'] = "Les remparts ont été améliorés !";
 		echo "check ok";
 		echo " ".$_POST['city_id']." ".$_POST['city_name']." ".$_POST['cost']." ".$_POST['money'];
 		header('Location: /City-Manager/'.$pseudo.'/'.$name);
 	
 	}else{
 	
-	$_SESSION['Message'] = "Or insuffisant pour effectuer cette opération !";
+	$_SESSION['Message'] = "Or insuffisant pour effectuer cette opération !";;
 		
 		echo "check pas assez d'or";
 		$pseudo = $_SESSION['Player_pseudo'];

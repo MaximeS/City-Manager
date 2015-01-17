@@ -23,7 +23,9 @@ if(!empty($_POST['new_city_name']) AND isset($_POST['new_city_name']) )
 		
 		
 	
-		$connexion->exec("INSERT INTO city VALUES ('', '$name','500','0','0','0','','0','1','0','$Player_id');");
+		$connexion->exec("INSERT INTO city VALUES ('', '$name','500','500','0','0','0','','0','1','1','$Player_id',NOW());");
+		
+		$connexion->exec("INSERT INTO news VALUES ('', 'nouvelle ville : $name','Une nouvelle ville a été créée !',NOW());");
 		
 		$pseudo = $_SESSION["Player_pseudo"];
 		
@@ -35,7 +37,7 @@ if(!empty($_POST['new_city_name']) AND isset($_POST['new_city_name']) )
 	
 	else{
 	
-		$_SESSION['Message'] = " Erreur : Le nom \"'$newname'\" est déja pris !";
+		$_SESSION['Message'] = " Erreur : Le nom \"$newname\" est déja pris !";
 		echo "déja pris";
 		header('Location: /City-Manager/addcity');
 		
