@@ -28,7 +28,6 @@
 			<h1> 
 				Informations : 
 				<form method="post"> 
-					<input type = 'submit' value='rafraîchir'>
 				</form>
 			</h1>
 			

@@ -76,6 +76,13 @@ Session_start();
 		$app->render('../../controller/controllerCity.php', array('pseudo'=>$pseudo, 'City'=>$City));
 	
 	})->name('contact')->conditions(['name' => '[a-zA-Z0-9]*']);
+	
+	
+	$app->get('/:pseudo/:City/attack', function($pseudo, $City) use ($app){
+	
+		$app->render('../../vue/lib/Attack_selectPlayer.php', array('pseudo'=>$pseudo, 'City'=>$City));
+	
+	})->name('contact')->conditions(['name' => '[a-zA-Z0-9]*']);
 
 	
 	if (!empty($_SESSION['Player_id'])){

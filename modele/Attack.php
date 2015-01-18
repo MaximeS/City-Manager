@@ -7,7 +7,7 @@ $SoldiersBDD = $connexion->prepare('SELECT Soldiers FROM city WHERE City_id = :c
 $SoldiersBDD->execute(array('city_id'=>$_SESSION['City_id']));
 $Soldiers2 = $SoldiersBDD->fetch();
 $Soldiers = $Soldiers2['Soldiers'];
-if ($SoldiersEnvoyer > $Soldiers 
+if ($SoldiersEnvoyer > $Soldiers)
 {
 	echo "Vous n'avez pas assez de soldats";
 	return 0;

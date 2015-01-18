@@ -50,6 +50,6 @@ foreach ($cities as $city){
 
 	$sth2 = $connexion->exec("UPDATE city SET lastco = NOW() WHERE City_id= $City_id");
 	
-	$gold = $newgold;
-	$soldier = $newsoldier;
+	$gold = (int)$newgold;
+	$soldier = (int)$newsoldier;
 ;?>
