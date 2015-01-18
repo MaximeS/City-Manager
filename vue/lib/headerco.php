@@ -14,7 +14,7 @@
 					Profil
 				</a>
 				
-				<a id="inscription" href="controller/DestroySession.php">
+				<a id="inscription" href="/City-Manager/controller/DestroySession.php">
 					déconnexion
 				</a>
 				

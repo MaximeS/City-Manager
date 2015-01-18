@@ -3,6 +3,7 @@
 
 
 $Player_id = $_SESSION['Player_id'];
+$Player_name = $_SESSION['Player_id'];
 
 include "connexion_PDO.php";
 
@@ -14,7 +15,7 @@ $cities=$req->fetchAll();
 
 foreach ($cities as $city){
 
-	
+	$_SESSION['City_name'] = $city['Name'];
 
 	$Citygold = $city['Gold'];
 	$gold_s = $city['Gold_s'];

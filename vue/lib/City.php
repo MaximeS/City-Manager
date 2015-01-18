@@ -130,6 +130,11 @@
 	<div class="LeftMenuB">
 	</br>
 		<h1> Interractions </h1>
+		
+		</br></br>
+		
+		<a href="/City-Manager/<?php echo $pseudo;?>/<?php echo $City_name; ?>/attack">	<div class="MenuButton"> Lancer une attaque ! </div> </a>
+		
 	</br>
 	
 	</div>
